@@ -43,4 +43,7 @@ The computer clock is ticking, date objects are not.
 
 new Date() creates a date object with the current date and time:
 You cannot omit month. If you supply only one parameter it will be treated as milliseconds. 
+Math.E and Math.log() are twins.
+
+
 =========== DATE'S =================
