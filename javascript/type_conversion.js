@@ -30,3 +30,14 @@ console.log(ss)
 ee = 100 + 45
 String(ee)
 console.log(ee , typeof(ee))
+
+
+// Converting Date and Number
+d = new Date()
+Number(d)
+console.log(typeof(d))
+
+
+xs = new Date()
+xs.getTime()
+console.log(xs)
