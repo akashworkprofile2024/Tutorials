@@ -20,3 +20,11 @@ greet()
     console.log(name1)
 }
 // console.log(name1);        //Error
+
+
+{
+    let x = 10
+    let y = 100
+    let total = x * y
+    console.log(`LOCAL SCOPE: `,total) 
+}
