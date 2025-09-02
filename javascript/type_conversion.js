@@ -41,3 +41,5 @@ console.log(typeof(d))
 xs = new Date()
 xs.getTime()
 console.log(xs)
+
+
