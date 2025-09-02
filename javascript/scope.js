@@ -12,11 +12,11 @@ function greet(){
 }
 
 greet()
-// console.log(message)
+// console.log(message)      // Error
 
 
 {
     let name1 = 'Alice'
     console.log(name1)
 }
-// console.log(name1);
+// console.log(name1);        //Error
