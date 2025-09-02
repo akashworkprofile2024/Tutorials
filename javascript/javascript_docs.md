@@ -44,6 +44,11 @@ The computer clock is ticking, date objects are not.
 new Date() creates a date object with the current date and time:
 You cannot omit month. If you supply only one parameter it will be treated as milliseconds. 
 Math.E and Math.log() are twins.
-
-
 =========== DATE'S =================
+
+================== SWITCH ==========
+Switch Control Flow
+Based on a condition, switch selects one or more code blocks to be executed.
+switch executes the code blocks that matches an expression.
+switch is often used as a more readable alternative to many if...else if...else statements, especially when dealing with multiple possible values.
+==================SWITCH ===========
