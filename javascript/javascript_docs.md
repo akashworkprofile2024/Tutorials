@@ -80,3 +80,4 @@ Code blocks allows for multiple statements to be treated as a single unit.
 =========== Defining Scope ==============
 Variables declared with let and const inside a code block are "block-scoped," meaning they are only accessible within that specific block.
 =========== Defining Scope ==============
+
