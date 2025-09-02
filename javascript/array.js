@@ -102,6 +102,10 @@ const myObj = [
 ];
 
 // Accessing John by index (0)
+console.log('\n' , 'Acess John and Maria');
 console.log(myObj[0]);
-console.log(myObj[1]);
+console.log(myObj[1] , '\n');
 
+// Access Name by key and index 
+console.log(myObj[0].name);
+console.log(myObj[1].name);
