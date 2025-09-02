@@ -52,3 +52,14 @@ Based on a condition, switch selects one or more code blocks to be executed.
 switch executes the code blocks that matches an expression.
 switch is often used as a more readable alternative to many if...else if...else statements, especially when dealing with multiple possible values.
 ==================SWITCH ===========
+
+============= Errors =================
+Throw, and Try...Catch...Finally
+The try statement defines a code block to run (to try).
+
+The catch statement defines a code block to handle any error.
+
+The finally statement defines a code block to run regardless of the result.
+
+The throw statement defines a custom error.
+=============Errors =================
