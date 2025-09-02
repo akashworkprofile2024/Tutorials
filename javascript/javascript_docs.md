@@ -63,3 +63,13 @@ The finally statement defines a code block to run regardless of the result.
 
 The throw statement defines a custom error.
 =============Errors =================
+
+============ Global Scope ============
+Global Scope
+Variables declared Globally (outside any block or function) have Global Scope.
+
+Global variables can be accessed from anywhere in a JavaScript program.
+
+Variables declared with var, let and const are quite similar when declared outside a block.
+============ Global Scope ============
+
