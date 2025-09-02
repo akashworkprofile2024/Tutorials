@@ -35,6 +35,12 @@ In JavaScript, objects use named indexes.
 
 JavaScript has a built-in array constructor new Array().
 
-
-
 ========  ARRAY =================
+
+===========  DATE'S =================
+Date objects are static. The "clock" is not "running".
+The computer clock is ticking, date objects are not.
+
+new Date() creates a date object with the current date and time:
+You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
+=========== DATE'S =================
