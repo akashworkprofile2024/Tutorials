@@ -77,3 +77,6 @@ Variables declared with var, let and const are quite similar when declared outsi
 Code blocks allows for multiple statements to be treated as a single unit.
 =========== Code Blocks Statements =======
 
+=========== Defining Scope ==============
+Variables declared with let and const inside a code block are "block-scoped," meaning they are only accessible within that specific block.
+=========== Defining Scope ==============
