@@ -81,3 +81,6 @@ Code blocks allows for multiple statements to be treated as a single unit.
 Variables declared with let and const inside a code block are "block-scoped," meaning they are only accessible within that specific block.
 =========== Defining Scope ==============
 
+============ String Method ================
+The substr() method is removed (deprecated) in the latest JavaScript standard.
+============ String Method =================
