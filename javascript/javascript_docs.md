@@ -83,4 +83,9 @@ Variables declared with let and const inside a code block are "block-scoped," me
 
 ============ String Method ================
 The substr() method is removed (deprecated) in the latest JavaScript standard.
+String Replace:
+By default, the replace() method replaces only the first match:
+By default, the replace() method is case sensitive. Writing string (with upper-case) will not work:
+To replace case insensitive, use a regular expression with an /i flag (insensitive): /string/i
+
 ============ String Method =================
