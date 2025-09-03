@@ -11,8 +11,11 @@ const todaydate= new Date()
 console.log(`${months[todaydate.getMonth()]}`); 
 
 const gh = new Date();
+const gg = Date.now();
 console.log(`Get Hours: ${gh.getHours()}`);
 console.log(`Get Minute: ${gh.getMinutes()}`);
 console.log(`Get Seconds: ${gh.getSeconds()}`);
 console.log(`Get Milliseconds: ${gh.getMilliseconds()}`);
 console.log(`Get Day: ${gh.getDay()}`);
+console.log(`Get Time: ${gh.getTime()}`);
+console.log(`Date Now: ${gg}`);
