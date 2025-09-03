@@ -9,4 +9,3 @@ let text1 = "Hello world, welcome to the universe.";
 let email = 'akash@gmail.com'
 console.log(`String Startswith: ${text1.startsWith('Hello')}`);
 console.log(`String Endswith: ${email.endsWith('@gmail.com')}`);
-
