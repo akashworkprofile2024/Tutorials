@@ -38,3 +38,25 @@ function fetchdata(num1 , num2 , connectcallbackport){
 }
 
 fetchdata('Akash',' Biswas',display2)
+
+/* 
+ In the example above, display2 is a called a callback function.
+
+It is passed to fetchdata() as an argument.
+*/
+
+
+const number = new Array(1,2,-3,-4,5)
+console.log(`Remove Negative Number: ${removeneg(number , (x) => x >= 0)}`);  //checking area this one 
+
+function removeneg(numbers,callback){
+    const emptyarr = []
+    for ( const x  of numbers){
+        if(callback(x)){
+           emptyarr.push(x)
+        }
+    }
+    return emptyarr
+}
+
+
