@@ -89,3 +89,17 @@ By default, the replace() method is case sensitive. Writing string (with upper-c
 To replace case insensitive, use a regular expression with an /i flag (insensitive): /string/i
 
 ============ String Method =================
+
+================  Async ===================
+
+CallBack:A callback is a function passed as an argument to another function
+This technique allows a function to call another function
+A callback function can run after another function has finished
+
+Asynchronous: Functions running in parallel with other functions are called asynchronous
+
+Promises: 
+"Producing code" is code that can take some time
+"Consuming code" is code that must wait for the result
+A Promise is an Object that links Producing code and Consuming code
+============== Async =======================
