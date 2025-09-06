@@ -42,8 +42,6 @@ const storefun = function(){
 console.log(`${typeof storefun}`);    // function object
 
 
-
-
 /* 
 
 Is Javascript Dynamic or Static Type Language ? 
