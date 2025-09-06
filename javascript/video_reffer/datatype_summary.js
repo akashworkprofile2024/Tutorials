@@ -39,7 +39,7 @@ const storefun = function(){
       console.log(`${'Hello Javascript'}`);
 }
 
-console.log(`${typeof storefun}`);
+console.log(`${typeof storefun}`);    // function object
 
 
 
