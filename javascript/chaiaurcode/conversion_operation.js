@@ -15,4 +15,13 @@ let varletcon = Number(varlet)
 console.log(`33abc`,typeof varletcon)
 console.log(`33abc store as`,varletcon) // NAN
 
+let loggedin1 = 1
+let loggedin0 = 0 
+console.log(`1`,Boolean(loggedin1))
+console.log(`0`,Boolean(loggedin0))
 
+let emptyvar = ''
+let nonemptyvar = 'Akash'
+
+console.log(`EmptyVar; `, Boolean(emptyvar))
+console.log(`Non-EmptyVar: `,Boolean(nonemptyvar))
