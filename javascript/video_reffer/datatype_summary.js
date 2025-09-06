@@ -50,8 +50,8 @@ Dynamic typing का मतलब है कि आपको variable declare �
 */
 
 /*
-    Stack Used in   -> Primitive Type
-     Heap Used in  -> (Non Primitive)
+    Stack Used in   -> Primitive Type   -> give always copy
+     Heap Used in  -> (Non Primitive) -> give always refference
 */
 
 const username='Akash Biswas'  // =>   
