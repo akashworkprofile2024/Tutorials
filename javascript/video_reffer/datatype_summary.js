@@ -49,3 +49,25 @@ Dynamic typing का मतलब है कि आपको variable declare �
 
 */
 
+/*
+    Stack Used in   -> Primitive Type
+     Heap Used in  -> (Non Primitive)
+*/
+
+const username='Akash Biswas'  // =>   
+let anothername = username 
+anothername = 'Codetokaroyaar'   // copy value of original one
+console.log(`${anothername}`);
+console.log(`${username}`);
+
+
+let user1 ={
+    email:'user@gmai.com',
+    upi:'user@yesbank'
+}
+
+let user2=user1        // refference of user1
+user2.email = 'akash@gmail.com'
+
+console.log(`${user1.email}`);
+console.log(`${user2.email}`);
