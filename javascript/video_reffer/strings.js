@@ -12,7 +12,9 @@ const stringvar = '    Hello World    '
 console.log(`${stringvar}`);
 console.log(`${stringvar.trim()}`);
 
-let namefile = 'The Whole World is blind'
-let store = namefile.split(',')
-console.log(`${store}`); 
+let namefile = 'The Whole World is blind';
+let store = namefile.split(" ");
+console.log(`${store}`);
+
+
 // console.log(`${namefile[0]}`);
