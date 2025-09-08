@@ -15,4 +15,10 @@ const real_arr = newarr.flat(Infinity)  // spread out all array inside array
 console.log(`${real_arr}`);  
 
 
+// Checking element
+
+console.log(`Is Array or Not: ${Array.isArray('Akash Biswas')}`);
+
+let convertstring = Array.from('Akash Biswas')
+console.log('Coverting Array: ',convertstring)
 
