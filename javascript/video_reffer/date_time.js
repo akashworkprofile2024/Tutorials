@@ -26,3 +26,7 @@ console.log(`${ef.getTime()}`);
 let test = new Date()
 console.log(`Get Time: ${test.getTime()}`);
 console.log(`Get Months: ${test.getMonth()}`);
+console.log(`Get Day: ${test.getDay()}`);
+console.log(`Get Full-Year: ${test.getFullYear()}`);
+
+
