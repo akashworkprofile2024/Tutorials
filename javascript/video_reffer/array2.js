@@ -19,6 +19,13 @@ console.log(`${real_arr}`);
 
 console.log(`Is Array or Not: ${Array.isArray('Akash Biswas')}`);
 
-let convertstring = Array.from('Akash Biswas')
+let convertstring = Array.from('Akash Biswas') // Array.from ->  convert into Array
 console.log('Coverting Array: ',convertstring)
 
+console.log(Array.from({username:'Akash Biswas'})) // uncommon concept
+
+let score = 100
+let score2 = 200
+let score3 = 300
+
+console.log(`Convert Variable into Array: `,Array.of(score,score2,score3))
