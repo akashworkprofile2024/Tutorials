@@ -35,6 +35,23 @@ console.log(`After Modify Element: `,user.email)
 
 
 // Lock element on Object
-Object.freeze(user)  
-user.email='rahul1999@gmail.com'
-console.log(`Try to Change After Freeze:` , user); 
+// Object.freeze(user)  
+// user.email='rahul1999@gmail.com'
+// console.log(`Try to Change After Freeze:` , user); 
+
+
+// function with object
+user.greeting = function(){
+    console.log('Hello Javascript');
+}
+
+console.log(`Array Function: `, user.greeting())
+
+user.greeting2 = function(){
+    console.log(`${this.name}`);
+}
+
+console.log(`${user.greeting2()}`);
+
+
+
