@@ -5,5 +5,10 @@ const  course={
 }
 
 const {courseInstructor} = course
-
 console.log(`${courseInstructor}`);
+
+// Destructuring Concepts
+const {courseInstructor: instruct} = course
+console.log(`${instruct}`);
+
+
