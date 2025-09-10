@@ -103,3 +103,5 @@ Promises:
 "Consuming code" is code that must wait for the result
 A Promise is an Object that links Producing code and Consuming code
 ============== Async =======================
+
+Browser Engine is Windows object 
