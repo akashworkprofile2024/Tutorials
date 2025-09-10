@@ -23,3 +23,4 @@ function handleobject(itempass){
         console.log(`Item name is ${itempass.item_name} , and Price is:  ${itempass.price}`)
 }
 handleobject(item)
+
