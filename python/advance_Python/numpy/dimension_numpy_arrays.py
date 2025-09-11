@@ -21,8 +21,19 @@ arr3 = np.array([[['html','Css','Java'],['python','Ruby','C++'],['QBasic' , 'Jav
 print(f'3-D Array{arr3} , {type(arr3)}\n')
 
 
+arr4 = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+print(arr4[0], '\n')
+
 # Check Number of Dimension
 print(f'Dimension: {arr.ndim}')
 print(f'Dimension: {arr1.ndim}')
 print(f'Dimension: {arr2.ndim}')
 print(f'Dimension: {arr3.ndim}')
+print(f'Dimension: {arr4.ndim}')
+
+
+# Higher Dimensional Arrays
+arr5 = np.array([1, 2, 3, 4], ndmin=6)
+
+print(arr5)
+print('number of dimensions :', arr5.ndim)
