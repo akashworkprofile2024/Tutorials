@@ -37,12 +37,18 @@
 // coffee()
 
 
-// Basic Arrow Function 
+// Basic Arrow Function must  use Return Keyword
 const addtwo = (n1 , n2) =>{
      return n1 + n2
 }
-
 console.log(`Result Using Arrow Function: ${addtwo(3,4)}`);
+
+
+// Using Arrow Function didnt need return Keyword
+const var2=(num1,num2)=>(num1+num2)
+console.log(`Arrow Function using Parenthesis: ${var2(4,6)}`);
+
+
 
 
 // Arrow function with Implicit Return
@@ -51,5 +57,9 @@ console.log(`Arrow With Implicit Return: ${addanother(3,5)}`);
 
 
 // Arrow Function Object Return
-const addanotherone=(num1,num2)
+const addanotherone=(num1,num2) => ({username:'Akash'})
+console.log(addanotherone(3,4));
+
+
+
 
