@@ -48,11 +48,18 @@ Data को private रखने के लिए।
 
 
 
-(function myfun(){
+(function myfun(){   // This is named IIFE
        console.log('DB Connected');
 })();
 
-( () =>{
+( () =>{  // Simple IIFE
     console.log(`DB Connected Two`)
-})()
+})();
+
+
+// passing parameter in IIFE
+((name) => {
+      console.log('Welcome to Website', name)
+})('Akash');
+
 
