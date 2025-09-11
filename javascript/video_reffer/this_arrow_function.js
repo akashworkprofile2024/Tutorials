@@ -61,5 +61,3 @@ const addanotherone=(num1,num2) => ({username:'Akash'})
 console.log(addanotherone(3,4));
 
 
-
-
