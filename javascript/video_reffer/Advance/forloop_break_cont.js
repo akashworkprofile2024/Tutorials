@@ -55,3 +55,13 @@ const arr = new Array('username1','username2','username3','username4','username5
 
 
 
+// SMALL KEYWORDS
+// BREAK AND CONTINUE
+
+for(let i =1;i<=10;i++){
+    if(i===5){
+       console.log('Loop Break at 5');
+       break;
+    }
+     console.log(`Value of: ${i}`);
+}
