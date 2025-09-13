@@ -153,3 +153,4 @@ const isEven = num % 2 === 0 ? console.log('Even Number'):console.log ('Odd Numb
 const person = 18;
 const canvote = person >=18 ? 'Can Vote':'Cannot Vote';
 console.log(canvote);
+
