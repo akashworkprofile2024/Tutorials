@@ -13,7 +13,7 @@ const num  = [1,2,3,4,5,6]
 // const store = num.filter((ele)=> ele > 2)
 // console.log(store)
 
-const store = num.filter((ele)=>{ele > 4})
-console.log(store)
+// const store = num.filter((ele)=>{ return ele > 2})
+// console.log(store)
 
 
