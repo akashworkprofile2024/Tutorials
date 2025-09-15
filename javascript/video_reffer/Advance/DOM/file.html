@@ -1,0 +1,46 @@
+<!DOCTYPE html>   <!-- Document Type-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <div class="bg-black">
+        <h1 id="heading" class="iamfine">Javascript in Vscode</h1>
+        <p id="test">Lorem ipsum dolor sit amet.</p>
+        <p id="innertext"></p>
+        <p id="innertext1">This Is Awesome Language<span style="display: none;">Javascript</span></p>
+         <p id="innertext2">This Is Awesome Language<span style="display: none;">Javascript</span></p>
+        
+    </div>
+</body>
+<!-- Javascript -->
+ <script>
+    document.getElementById('test').style.backgroundColor='red';
+    document.getElementById('test').style.color='blue';
+    document.getElementById('test').style.fontSize="5rem"
+     
+    document.getElementById('innertext').innerHTML = 'I am innerHtml';
+    
+    /* Difference between Innertext and textContext*/
+    document.getElementById('innertext1').innerText   // show Only Visible Part in html Document
+
+    document.getElementById('innertext2').textContent // show visible and hidden part in html Document
+    
+
+
+
+
+
+ </script>
+</html>
+
+
+
+
+
+<!-- DOM => DOCUMENT OBJECT MODEL 
+    Document Structure
+    Object creation
+-->
