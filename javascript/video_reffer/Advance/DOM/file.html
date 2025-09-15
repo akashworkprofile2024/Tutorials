@@ -16,9 +16,10 @@
          <input type="text" value="name">
 
          <ul>
-            <li>coffee</li>
-            <li>tea</li>
-            <li>Cocacola</li>
+            <li class="list-item">coffee</li>
+            <li class="list-item">tea</li>
+            <li class="list-item">Cocacola</li>
+            <li class="list-item">Alcohol</li>
          </ul>
          
     </div>
@@ -66,4 +67,37 @@ const storeli=document.queryselector('li')
 storeli.style.backgroundColor='red'
 storeli.style.Color='black' 
  
+
+QuerySelectorAll:
+
+const storeli = document.queryselector('li')
+storeli[0].style.backgroundColor = "orange"
+
+const storeh1=document.queryselector('h1')
+storeh1[0].style.backgroundColor = 'green'
+storeh1[0].style.color='yellow'
+
+
+ForEach QuerySelectorAll :-
+
+const storeli=document.queryselector('li')
+storeli.forEach((configli)=>{
+configli.style.backgroundColor='green'
+configli.style.color='yellow'
+})
+
+
+Convert Html collection into Array
+
+const storetemplist = document.getelementbyClassName('mention class here')
+
+const converted = Array.from(storetemplist)
+
+converted.forEach((modify)=>{
+    modify.style.backgroundColor='Yellow';
+    modify.style.color='black';
+})
+
+
 -->
+
