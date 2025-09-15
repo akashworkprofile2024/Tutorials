@@ -13,6 +13,14 @@
         <p id="innertext1">This Is Awesome Language<span style="display: none;">Javascript</span></p>
          <p id="innertext2">This Is Awesome Language<span style="display: none;">Javascript</span></p>
         
+         <input type="text" value="name">
+
+         <ul>
+            <li>coffee</li>
+            <li>tea</li>
+            <li>Cocacola</li>
+         </ul>
+         
     </div>
 </body>
 <!-- Javascript -->
@@ -21,18 +29,16 @@
     document.getElementById('test').style.color='blue';
     document.getElementById('test').style.fontSize="5rem"
      
-    document.getElementById('innertext').innerHTML = 'I am innerHtml';
+    document.getElementById('innertext').innerText = 'I am innerHtml';
     
     /* Difference between Innertext and textContext*/
     document.getElementById('innertext1').innerText   // show Only Visible Part in html Document
 
     document.getElementById('innertext2').textContent // show visible and hidden part in html Document
-    
+ </script>
 
-
-
-
-
+ <script>
+    document.querySelector('h1')
  </script>
 </html>
 
@@ -43,4 +49,21 @@
 <!-- DOM => DOCUMENT OBJECT MODEL 
     Document Structure
     Object creation
+-->
+
+<!-- 
+ DOM QUERYSELECTOR()
+
+ document.queryselector('h2')    => tags
+ document.queryselector('#title') => Id's
+ document.queryselector('.headings') => Class
+ document.queryselector('input[type="password"]') => input
+
+ Store into variable
+
+const storeul = document.queryselector('ul')
+const storeli=document.queryselector('li')
+storeli.style.backgroundColor='red'
+storeli.style.Color='black' 
+ 
 -->
