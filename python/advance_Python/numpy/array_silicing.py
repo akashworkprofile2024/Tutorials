@@ -21,6 +21,17 @@ print(arr[1:5:2])
 print(arr[::2])  # Exclude element every 2nd position
 
 
+# 2D array
+
+arr2d = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+print('2d array: ',arr2d[1 , 1:4])  # 1 is index and 1 and 4 element is excluded
+
+print('2D array: ',arr2d[0:2 , 2])   # return 2nd pos from both array
+
+print('2D Array: ',arr2d[0:2, 1:4]) # exclude 1 and 4 pos from the both array
+
+
+
 
 
 
