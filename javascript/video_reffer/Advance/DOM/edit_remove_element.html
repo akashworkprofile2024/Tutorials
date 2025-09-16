@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <ul class="language">
+                  <li>javascript</li>
+        </ul>
+
+
+</body>
+<script>
+    // Body function
+    function bodyconfig(){
+        const configbody= document.getElementsByTagName('body')[0]
+        configbody.style.backgroundColor='#212121';
+        configbody.style.color='white';
+        console.log(configbody)
+    }
+    bodyconfig()
+
+    // Basic Function    this method traverse whole code to reach end    unOptimized
+    function configul(catch_langname){
+          const configul = document.getElementsByClassName('language');
+          const li = document.createElement('li');
+          li.innerHTML=`${catch_langname}`
+          document.querySelector('.language').appendChild(li)
+    }
+    configul('Python');
+    configul('Java');
+
+
+    // Optimized method   this method dont traverse whole element to reach end   for bigproject
+    function optimized_configul(catch_langname){
+          const li = document.createElement("li");
+          li.appendChild(document.createTextNode(catch_langname));
+          document.querySelector('.language').appendChild(li);
+    }
+    optimized_configul('Golang');
+
+</script>
+</html>
