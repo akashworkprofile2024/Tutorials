@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+       <div>
+              
+       </div>
+
+        <p id="catch"></p>
+
+        <p id="catch1">Fire Files</p>
+        <p id="catch2"> Akash Biswas</p>
+</body>
+<script>
+    const storediv = document.createElement('div')
+    console.log(`CreateElement1: `,storediv); 
+    
+    storediv.className = 'main' ; // class name
+    storediv.id = 'myID'   // id name
+
+    // storediv.id = Math.random() *10 + 1 // random id gene
+    storediv.id = Math.round(Math.random()*10+1) // round of Random id gene
+    
+    // Custom Attribute: - 
+    storediv.setAttribute('title' , 'Generated Title Javascript')
+    storediv.style.backgroundColor='green'
+    storediv.style.padding='5px'
+   
+    //storediv.innerHTML='Awesome Javascript'
+    const addtext = document.createTextNode('Awesome Javascript')
+    storediv.appendChild(addtext)
+    
+    // direct BOdy Approach
+    document.body.appendChild(storediv)
+
+    // Paragraph id using
+    //document.getElementById('catch').appendChild(storediv)
+
+
+  // Apply function on different id's  
+function config(){
+    const storecatch1 = document.getElementById('catch1');
+    const storecatch2 = document.getElementById('catch2');
+
+    [storecatch1, storecatch2].forEach(el => {
+        el.style.backgroundColor = 'green'
+        el.style.padding = '10px'
+        el.style.color = 'yellow'
+        el.style.fontSize = '5rem'
+    })
+}
+config()
+
+</script>
+</html>
