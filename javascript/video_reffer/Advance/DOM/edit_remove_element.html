@@ -23,23 +23,44 @@
     bodyconfig()
 
     // Basic Function    this method traverse whole code to reach end    unOptimized
-    function configul(catch_langname){
+    /* function configul(catch_langname){
           const configul = document.getElementsByClassName('language');
           const li = document.createElement('li');
           li.innerHTML=`${catch_langname}`
           document.querySelector('.language').appendChild(li)
     }
     configul('Python');
-    configul('Java');
+    configul('Java'); */ 
 
 
     // Optimized method   this method dont traverse whole element to reach end   for bigproject
-    function optimized_configul(catch_langname){
+    /*
+          function optimized_configul(catch_langname){
           const li = document.createElement("li");
           li.appendChild(document.createTextNode(catch_langname));
           document.querySelector('.language').appendChild(li);
     }
     optimized_configul('Golang');
+    */
 
-</script>
+
+    // Edit values
+     /*const sencondlang = document.querySelector('li:nth-child(2)')
+     const newli = document.createElement('li')
+     newli.textContent = 'MongoDB'
+     sencondlang.replaceWith(newli)
+     console.log(sencondlang)*/
+
+
+     // Edit
+    /*const firstlang = document.querySelector('li:nth-child(1)')
+    const newli1 = document.createElement('li')
+    newli1.textContent='TypeScript'
+    firstlang.replaceWith(newli1)*/
+
+    // Remove Element from last
+    
+    /*const lasteleremove = document.querySelector('li:last-child')
+    lasteleremove.remove()*/
+</script> 
 </html>
