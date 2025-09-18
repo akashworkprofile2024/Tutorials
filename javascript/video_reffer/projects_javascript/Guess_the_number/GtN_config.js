@@ -85,3 +85,4 @@ function endgame() {
     playgame = false;
     newgame();
 }
+
