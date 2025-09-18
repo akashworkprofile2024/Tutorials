@@ -9,20 +9,77 @@
 </head>
 <body class="">
         <h2>Amazing Images</h2>
-        <ul  class="w-50">
+        <ul  class="w-50" id="images">
             <li><img class="img-fluid w-50" src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?_gl=1*2cbzvr*_ga*Nzg1NTc2OTIzLjE3NTgxNzYzNTI.*_ga_8JE65Q40S6*czE3NTgxNzYzNTIkbzEkZzEkdDE3NTgxNzYzNzAkajQyJGwwJGgw" alt="japan" id="japan"></li>
             
             <li><img class="img-fluid w-50" src="https://images.pexels.com/photos/3018977/pexels-photo-3018977.jpeg?_gl=1*1ua709f*_ga*Nzg1NTc2OTIzLjE3NTgxNzYzNTI.*_ga_8JE65Q40S6*czE3NTgxNzYzNTIkbzEkZzEkdDE3NTgxNzY0NzgkajU5JGwwJGgw" alt="korea" id="korea"></li>
           
-            <li><img class="img-fluid w-50 " src="https://images.pexels.com/photos/2266406/pexels-photo-2266406.jpeg?_gl=1*rz4dnb*_ga*Nzg1NTc2OTIzLjE3NTgxNzYzNTI.*_ga_8JE65Q40S6*czE3NTgxNzYzNTIkbzEkZzEkdDE3NTgxNzY1NDEkajU5JGwwJGgw" alt="russia" id="russia" ></li>
+            <li><img class="img-fluid w-50 " src="https://images.pexels.com/photos/2266406/pexels-photo-2266406.jpeg?_gl=1*rz4dnb*_ga*Nzg1NTc2OTIzLjE3NTgxNzYzNTI.*_ga_8JE65Q40S6*czE3NTgxNzYzNTIkbzEkZzEkdDE3NTgxNzY1NDEkajU5JGwwJGgw" alt="russia" id="russia"></li>
             
            
             <li><img class="img-fluid w-50" src="https://images.pexels.com/photos/774282/pexels-photo-774282.jpeg?_gl=1*svxkpw*_ga*Nzg1NTc2OTIzLjE3NTgxNzYzNTI.*_ga_8JE65Q40S6*czE3NTgxNzYzNTIkbzEkZzEkdDE3NTgxNzY4MDUkajUzJGwwJGgw" alt="india" id="india"></li>
             
-            <li class="mt-2"><a style="text-decoration: none;" href="https://www.google.com">Google</a></li>
+            <li class="mt-2" ><a style="text-decoration: none;" href="https://www.google.com" id="google">Google</a></li>
         </ul>
+
+        <p id="clicktime"></p>
 </body>
 <script>
+     /* const config_russia = document.querySelector('#russia');
+      config_russia.onclick = function(){
+        alert('This is russia');
+      }*/
 
-</script>
+      // document.querySelector('#russia').addEventListener('click' , function(){ alert('This is Russia')} , false) //    // Best Approach
+
+      /*document.querySelector('#russia').addEventListener('click',function(e){
+          console.log(e);
+      } , true);  */
+
+      // Event Bubbling => false
+      //Event Capturing => true
+     
+      /*document.querySelector('#images').addEventListener('click' , function(){
+           console.log('Clicked inside the ul')
+      }, false); */
+
+      /* document.querySelector('#india').addEventListener('click' , function(e){
+           console.log('Clicked inside the india')
+           e.stopPropagation()
+      }, false); */
+
+
+      /* document.querySelector('#google').addEventListener('click' , function(e){
+           e.preventDefault();     
+           e.stopPropagation();
+           console.log('Google Clicked');
+      } ,false); */
+
+
+     document.querySelector('#images').addEventListener('click' , function(e){
+           /* console.log(e.target.parentNode);
+           let removit = e.target.parentNode
+            removit.remove() */
+          // removit.parentNode.removeChild(removit)
+
+          console.log(e.target.tagName);
+          if(e.target.tagName === 'IMG')
+          {
+            console.log(e.target.id)
+             let removeit = e.target.parentNode
+             removeit.remove();
+          }
+     } , false)
+     
+
+    </script>
 </html>
+
+<!-- AttachEvent() => Inter Explorer
+jQuery => onEventListener -->
+
+<!-- 
+   Type , Timestamp  , defaultPrevented , target , toElement , srcElement , CurrentTarget
+   clientX, clientY , ScreenX , ScreenY
+   altkey , ctrlkey , shiftkey , keyCode
+-->
