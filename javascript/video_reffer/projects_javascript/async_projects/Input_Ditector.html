@@ -26,7 +26,7 @@
                                     <th>Code</th>
                                 </tr>
                                 <tr>
-                                    <td>${e.key}</td>
+                                    <td>${e.key === ' ' ? 'Space' : e.key}</td>
                                     <td>${e.keyCode}</td>
                                     <td>${e.code}</td>
                                 </tr>
@@ -35,12 +35,18 @@
 
                       <style>
                               table , th , td , tr {
-                                   border:1px solid black;
-                                   border-collapse:collapse
+                                   border:1px solid white;
+                                   border-collapse:collapse;
+                                   text-align:center;
                               }
                       </style>
                   `;
          })
+
+
+         const body = document.querySelector('body')
+         body.style.backgroundColor = '#212121';
+         body.style.color= 'white';
 
 </script>
 </html>
