@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ultimate Color Changer</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+       let gencolor;
+       function hexcolornum(){
+          document.querySelector('#start').addEventListener('click' , function(){
+                     gencolor = setInterval(function(){
+                      const store =  '#' + Math.floor(100000 + Math.random()*900000).toString()
+                      document.body.style.backgroundColor=`${store}`;
+                      console.log(store)
+                    },1000)
+                    
+                     document.querySelector('#stop').addEventListener('click' , function(){
+                     clearInterval(gencolor);
+                     console.log(gencolor = null);
+       })
+    })  
+}hexcolornum()
+
+     
+        
+</script>
+</html>
