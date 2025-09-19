@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:white">
+       <h1>Javascript</h1>
+       <button id="start">Sart</button>
+        <button  id="stop">Stop</button>
+ </body>
+<script>
+           // Start Stop Script
+       /* const startpoint = function(){
+            console.log('Akash Biswas' , Date.now())
+        }
+        setInterval(startpoint,1000)*/
+
+
+
+       /* const display = function(catchit){
+            console.log(`${catchit} Akash Biswas` , Date.now())
+        }
+        setInterval(display,1000 ,'Hi')*/
+
+
+
+       /*const display = function(catchit){
+            console.log(`${catchit} Akash Biswas` , Date.now())
+        }
+        const intervalid = setInterval(display,1000 ,'Hi')
+        clearInterval(intervalid)*/
+
+
+
+       document.querySelector('#start').addEventListener('click' , function(){
+                     const store = setInterval(function (){
+                        console.log('Akash Biswas')
+                     } , 1000)
+
+                      document.querySelector('#stop').addEventListener('click',function(){
+                          clearInterval(store)
+                      })
+        
+        })
+
+      
+
+      
+           
+</script>
+</html>
