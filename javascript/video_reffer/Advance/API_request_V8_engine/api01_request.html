@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requesturlsrc = 'https://api.github.com/users/akashworkprofile2024';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturlsrc);
+    xhr.onreadystatechange = function(){
+        const store = xhr.readyState;
+        if(xhr.readyState === 4 ){
+              const data = JSON.parse(this.responseText);
+              console.log(`Total Data:` , data)
+              console.log(`Login By:${data.login}\nPublic Repository: ${data.public_repos}`)
+        }
+    }
+    xhr.send();
+</script>
+</html>
