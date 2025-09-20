@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+    
+</body>
+<script>
+       const requesturl = "https://api.github.com/users/akashworkprofile2024";
+       const xhr = new XMLHttpRequest();
+       xhr.open('GET', requesturl);
+       xhr.onreadystatechange = function(){
+                console.log(xhr.readyState);
+                if(xhr.readyState === 4 && xhr.status === 200 ){
+                         const data = JSON.parse(this.responseText);
+                         console.log(data);
+                         console.log(`login:${data.login}\npublic Repository: ${data.public_repos}\n `);
+                        
+                }
+       }
+       xhr.send();
+</script>
+</html>
+
+<!-- 
+const requesturl = "...";
+
+यह GitHub API का URL है।
+
+जब आप इस URL को कॉल करेंगे तो यह akashworkprofile2024 यूज़र का पब्लिक डेटा (JSON फॉर्मेट में) वापस देगा।
+
+const xhr = new XMLHttpRequest();
+
+यह एक नया XMLHttpRequest ऑब्जेक्ट बनाता है।
+
+इसका इस्तेमाल ब्राउज़र से सर्वर को डेटा भेजने/मंगाने के लिए होता है।
+
+xhr.open('GET', requesturl);
+
+यह बताता है कि हम GET रिक्वेस्ट करेंगे उस URL पर।
+
+यानी हम सर्वर (GitHub API) से डेटा "मंगाने" वाले हैं।
+
+xhr.onreadystatechange = function(){ ... }
+
+यहाँ हमने एक फ़ंक्शन दिया है, जो हर बार चलेगा जब रिक्वेस्ट की "state" बदलेगी।
+
+xhr.readyState यह बताता है कि रिक्वेस्ट किस स्टेज पर है:
+
+0 → अभी create हुआ
+
+1 → open() कॉल हुआ
+
+2 → send() कॉल हुआ
+
+3 → डेटा आ रहा है (loading)
+
+4 → रिक्वेस्ट पूरी हो गई (done)
+
+if(xhr.readyState === 4 && xhr.status === 200)
+
+यह चेक करता है कि रिक्वेस्ट पूरी हो चुकी है (readyState === 4) और सफल है (status === 200)।
+
+200 का मतलब success response है।
+
+const data = JSON.parse(this.responseText);
+
+this.responseText में पूरा डेटा आता है, लेकिन वो string होता है।
+
+JSON.parse(...) उसे JavaScript object में बदल देता है ताकि हम उसके अंदर से values निकाल सकें।
+
+console.log(data);
+
+यह पूरा object कंसोल में दिखा देगा (GitHub user का पूरा public डेटा)।
+
+console.log(\login:${data.login}\npublic Repository: ${data.public_repos}\n `);`
+
+यह login (username) और public_repos (कितने पब्लिक रिपॉजिटरी हैं) प्रिंट करता है।
+
+\n का मतलब है नई लाइन।
+-->
