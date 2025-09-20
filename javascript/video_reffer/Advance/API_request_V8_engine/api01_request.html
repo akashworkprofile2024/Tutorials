@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <img id="github_avatar" src="" alt="" >
+    </div>
 </body>
 <script>
     const requesturlsrc = 'https://api.github.com/users/akashworkprofile2024';
@@ -15,9 +19,21 @@
     xhr.onreadystatechange = function(){
         const store = xhr.readyState;
         if(xhr.readyState === 4 ){
+
+              // FETCH AND STORE COMMING API DATA
               const data = JSON.parse(this.responseText);
               console.log(`Total Data:` , data)
               console.log(`Login By:${data.login}\nPublic Repository: ${data.public_repos}`)
+              
+              // PUSH IN TO CONSOLE
+              const github_avatar = document.querySelector('#github_avatar')
+              github_avatar.src = data.avatar_url
+              github_avatar.style.borderRadius='50%'; 
+              
+              //PUSH IN TO HTML
+              const loginby = document.createElement('span')
+              loginby.innerText=`Profile Owner: ${data.login}`
+              document.querySelector('.container').appendChild(loginby)
         }
     }
     xhr.send();
