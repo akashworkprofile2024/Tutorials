@@ -32,8 +32,16 @@
               
               //PUSH IN TO HTML
               const loginby = document.createElement('span')
+              const repo = document.createElement('span')
               loginby.innerText=`Profile Owner: ${data.login}`
+              repo.innerText=`Repo: ${data.public_repos}`
+
               document.querySelector('.container').appendChild(loginby)
+              document.querySelector('.container').appendChild(repo)
+
+
+              
+
         }
     }
     xhr.send();
