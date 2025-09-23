@@ -17,27 +17,47 @@
 
 
 // THROUGH MULTIPLE DATA ENTIRES
-function emp(fname ,lname , dept , country){
-        this.fname = fname
-        this.lname=lname
-        this.dept=dept
-        this.country=country
-        // this.domain='IT'  
-}
-// NORMAL FETCH DATA
-const vpass1 = new emp('Akash' , "Biswas" , 'System admin' , 'INDIA')
-const vpass2 = new emp('Mick' , "Jones" , 'Developer' , 'USA')
-const vpass3 = new emp('Sakura' , "Moto" , 'Cheif Engineer' , 'JAPAN')
+// function emp(fname ,lname , dept , country){
+//         this.fname = fname
+//         this.lname=lname
+//         this.dept=dept
+//         this.country=country
+//         // this.domain='IT'  
+// }
+// // NORMAL FETCH DATA
+// const vpass1 = new emp('Akash' , "Biswas" , 'System admin' , 'INDIA')
+// const vpass2 = new emp('Mick' , "Jones" , 'Developer' , 'USA')
+// const vpass3 = new emp('Sakura' , "Moto" , 'Cheif Engineer' , 'JAPAN')
 
-// FETCH DATA BY OBJECT ENTRIES
-// vpass1.domain='IT'; 
+// // FETCH DATA BY OBJECT ENTRIES
+// // vpass1.domain='IT'; 
 
-const allemp = [vpass1,vpass2,vpass3];
+// const allemp = [vpass1,vpass2,vpass3];
 
-for( let emp of allemp){
-    for(let[key , value] of Object.entries(emp)){
-           console.log(`${key} : ${value}`)
-    } 
-}
+// for( let emp of allemp){
+//     for(let[key , value] of Object.entries(emp)){
+//            console.log(`${key} : ${value}`)
+//     } 
+// }
+
+
+
+// CONSTRUCTOR FUNCTION METHOD
+// function person(fname , lname , email , id){
+//     this.fname = fname
+//     this.lname=lname
+//     this.email=email
+//     this.id=id
+//     this.fullname=function(){
+//         return this.fname+" "+this.lname
+//     }
+// }
+// const per1 = new person("Akash" , 'Biswas' , 'akash@gmail.com' , 14526)
+// console.log(per1.fullname())
+
+
+
+
+
 
 
