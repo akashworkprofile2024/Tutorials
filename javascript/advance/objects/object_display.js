@@ -12,7 +12,7 @@
 
 
 
-// DISPLAY OBJECT VALUES AND KEY BOTH
+// DISPLAY OBJECT VALUES AND KEY BOTHe
     // const userdetail={
     //     username:"akash2000",
     //     pass:"123",
@@ -29,6 +29,28 @@
 
 
 
+// OBJECT ENTIRIES ()  FOR FETCH KEY AND VALUE IN ONE SHOT
 
+// const course={PYTHON:5000,JAVASCRIPT:5000,C:3000}
+// for(let[language ,  price] of Object.entries(course)){
+//         console.log(`Courses: ${language} :${price}`)
+// }
+
+
+
+
+
+// OBJECTS CONVERTED INTO STRINGS
+// const userdetail={
+//         username:"akash2000",
+//         pass:"123",
+//         email:"akash@gmail.com",
+//     }
+ 
+//     console.log(userdetail)
+//     let store =JSON.stringify(userdetail)
+//     console.log( store , typeof store)
     
+
+
 
