@@ -60,4 +60,24 @@
 
 
 
+// ADDING A METHOD TO A CONSTRUCTOR
+// function person(fname,lname,id){
+//     this.fname=fname;
+//     this.lname=lname;
+//     this.id=id;
+// }
+// const passvalue = new person('Akash' , 'Biswas' , 154422)
+// console.log(passvalue)
+// person.prototype.changename = function(name){
+//     this.lname=name;
+// }
+// // change lname
+// passvalue.changename('Kumar')
+// console.log(passvalue)
+
+
+
+
+
+
 
