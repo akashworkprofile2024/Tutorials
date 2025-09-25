@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="" name="html">HTML</a>
+    <a href="" name="css">CSS</a>
+    <a href="" name="xml">XML</a>
+    <p id="display"></p>
+</body>
+<script>
+        const store = document.querySelectorAll('a')
+        document.getElementById('display').innerHTML = `Total Anchors: ` + store.length   
+        store[0].style.backgroundColor = "red"
+        store[0].style.textDecoration = "none"
+        store[0].style.color = "white"
+
+        console.log(store)
+        
+</script>
+</html>
