@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <embed src="example.pdf" width="300" height="200">
+        <embed src="song.mp3" width="0" height="0">
+        <p id="show"></p>
+      
+</body>
+<script>
+        const storeembed = document.querySelectorAll('embed')
+        document.getElementById('show').innerHTML = storeembed.length
+</script>
+</html>
+
+<!-- 
+   Anchors
+   Body
+   embeds
+   forms
+   head
+   images  =   document.images.length
+   links = document.links.length
+   scripts = document.scripts.length
+   title = document.title.length
+-->
