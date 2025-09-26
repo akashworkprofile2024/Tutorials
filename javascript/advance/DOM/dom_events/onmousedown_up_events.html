@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body onmousedown="onhold(this)" onmouseup="onrelease(this)">
+         Light Mode
+</body>
+<script>
+        function onhold(obj){
+               obj.style.backgroundColor ='#212121'
+               obj.innerHTML='DarkMODE'; 
+               obj.style.color='white';
+        }
+
+        function onrelease(obj){
+                 obj.style.backgroundColor ='#ffffff'
+                 obj.innerHTML='LightMode'; 
+                 obj.style.color='black';
+        }
+</script>
+</html>
