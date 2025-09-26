@@ -1,0 +1,14 @@
+<div id="parentDiv">
+    <p id="para1">Paragraph 1</p>
+    <p id="para2">Paragraph 2</p>
+    <p id="para3">Paragraph 3</p>
+</div>
+
+<script>
+    const firstPara = document.getElementById('para1');
+
+    console.log(firstPara.nextElementSibling); // <p id="para2">Paragraph 2</p>
+
+    // Styling example
+    firstPara.nextElementSibling.style.color = "red"; 
+</script>
