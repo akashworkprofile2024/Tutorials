@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form name="myform" action=""  onsubmit="return validationform()" method="post">
+             Name: <input type="text" name="fname">
+             <input type="submit" value="Submit" name="submit">
+      </form>
+      <p id="demo"></p>
+</body>
+<script>
+    function validationform(){
+         const storevalue = document.forms['myform']['fname'].value;
+         if(storevalue === 10){
+             alert("Name must be filled out");  
+             return false;
+         }else{
+            document.querySelector('#demo').innerHTML=storevalue;
+             return false; 
+        }
+    }
+    
+</script>
+</html>
