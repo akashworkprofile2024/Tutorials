@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <p id="fire">Click Event: Click on IT</p>
+    <p id="fire2">Hello</p>
+    <button id="btn">Try it</button><br><br>
+    <button id="btn2">Mouse Actions</button> <br><br>
+    <p id="demo"></p>
+    
+    <button id="cal">Calculate</button>
+    <p id="demo1"></p>
+    
+
+    <div class="container1" style="background-color:blueviolet;padding:4%">
+              container 1
+              <p class="bubblingP1" style="background-color:black ; padding:3%">P element 1</p>
+    </div><br>
+    
+    <div class="container2" style="background-color:rgb(226, 43, 165);padding:4%">
+        container 2
+              <p  class="capturingP2" style="background-color:rgb(78, 250, 69); color:black ; padding:3%">P element 2</p>
+    </div>
+
+    <p id="display">Click me</p> 
+    <button class="btn3">Remove Events</button>
+    
+</body>
+<script> 
+    // Single Elements
+      /*  const storep = document.querySelector('#fire')
+        storep.addEventListener('click', function(){
+                alert('Click Event Apply');
+                storep.innerHTML ='Click Event: I am Change';
+                storep.style.backgroundColor='#CBC3E3'
+                storep.style.color='black';
+                storep.style.width='30%'
+                storep.style.textAlign='center'
+        })  */
+
+        // Mutli elements
+        /* const storep = document.querySelectorAll('#fire , #fire2');
+            storep.forEach(storepi => {
+               storepi.addEventListener('click' , function(){
+                alert('Click Event Apply');
+                storepi.innerHTML ='Click Event: I am Change';
+                storepi.style.backgroundColor='#CBC3E3';
+                storepi.style.color='black';
+                storepi.style.width='30%';
+                storepi.style.textAlign='center';
+               })    ;
+        }); */
+ 
+
+        // Add Many Event Handlers to the Same Element
+        
+        /*const storebtn = document.querySelector('#btn')
+        storebtn.addEventListener('click' , function1);
+        storebtn.addEventListener('click' , function2);
+
+        function function1(){
+            alert('Function 1 ')
+        } 
+        
+        function function2(){
+            alert('Function 2')
+        }*/
+
+       
+     //  ADD EVENTS FUNCTIONS ON ONE ELEMENTS  
+       /* const storebtn2 = document.querySelector('#btn2')
+        storebtn2.addEventListener('click' , click1);
+        storebtn2.addEventListener('mouseover' , mover);
+        storebtn2.addEventListener('mouseout' , mout);
+
+       
+        function mover(){
+            alert('Mouse Over Happen')
+        }
+        function click1(){
+               alert('Click Happen'); 
+         }
+        function mout(){
+            alert('Mouse Out Happen')
+        } */
+         
+
+    // Add an Event Handler to the window Object
+   /*window.addEventListener("resize", function(){
+          document.getElementById("demo").innerHTML = Math.random();
+   });*/
+
+
+   // PASSING PARAMETERS
+  /* const a = 5;
+   const b = 6;
+   
+   const storecal = document.querySelector('#cal')
+   storecal.addEventListener('click' , function(){
+            result(a ,b );
+   })
+
+   function result (n1 , n2){
+         document.querySelector('#demo1').innerHTML = `Result A + B = ${n1 + n2}`
+   }*/
+
+
+// Event Bubbling or Event Capturing?
+// Bubbling (false = default)
+const container1 = document.querySelector('.container1')
+const bubblingP1 = document.querySelector('.bubblingP1')
+
+container1.addEventListener('click', function(){ alert('Purple Container 1'); }, false);
+bubblingP1.addEventListener('click', function(){ alert('Black Container 1'); }, false);
+
+const container2 = document.querySelector('.container2')
+const capturingP2 = document.querySelector('.capturingP2')
+// Capturing (true)
+container2.addEventListener('click', function(){ alert('Pink Container 2'); }, true);
+capturingP2.addEventListener('click', function(){ alert('Green Container 2'); }, true);
+
+
+// RemoveEventlistener
+const storedisplay = document.querySelector('#display')
+function run(){
+    alert('Event is started ')
+}
+
+storedisplay.addEventListener('click' , run)
+
+document.querySelector('.btn3').addEventListener('click' , function(){
+           storedisplay.removeEventListener('click' , run);
+           alert('Event is Ended')
+})
+
+
+
+
+</script>
+</html>
