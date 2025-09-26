@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkcookies()">
+      <h1 onclick="changetext(this)">Nice</h1>
+
+
+      <!--  Assign Events Using the HTML DOM -->
+        <button id="btn">Click Here</button>
+        <p id="showdate"></p>
+
+
+       <!--  ONLOAD EVENT -->
+         <!-- <p>Onload Attribute</p> -->
+         <p id="showonload"></p>
+
+
+         <!-- ONINPUT EVENT -->
+          Oninput Event: <input type="text" id="name" name="name" oninput="uppercase()">
+
+          <!-- ON MOUSEOVER EVENT -->
+           <P id="herotext"  onmouseover="mover(this)" onmouseout="mout(this)">Boring 😒</P>
+</body>
+
+<script>
+            function changetext(sender){
+                sender.innerHTML='transfer data';
+            }
+ 
+
+          // Assign Events Using the HTML DOM
+          document.querySelector('#btn').onclick = displayDate;
+          function displayDate(){
+                   document.querySelector('#showdate').innerHTML = Date();  
+          }
+
+          
+          //  ONLOAD EVENT 
+         function checkcookies(){
+            let text = '';
+            if(navigator.cookieEnabled == true){
+                text = ' Onload Event : Cookies are Enabled';
+            }else{
+                text = 'Onload Event : Cookied are Disable';
+            }
+            document.querySelector('#showonload').innerHTML = text;
+         }
+
+
+         // ONINPUT EVENT
+         function uppercase(){
+              const store = document.querySelector('#name')
+              store.value = store.value.toUpperCase();
+         }
+
+
+         // ONMOUSEOVER EVENT
+         function mover(obj){
+            obj.style.backgroundColor = 'yellowgreen';
+            obj.style.width='20%'
+            obj.style.textAlign='center'
+            obj.innerHTML = 'ONMOUSEOVER EVENT: Awesome 😄 !!';
+         }
+         function mout(obj){
+            obj.style.backgroundColor = 'white';
+            obj.style.width='20%'
+            obj.style.textAlign='left'
+            document.querySelector("#herotext").innerHTML = 'ONMOUSEOUT EVENT: Boring 😒';
+         }
+</script>
+</html>
+
+
+
