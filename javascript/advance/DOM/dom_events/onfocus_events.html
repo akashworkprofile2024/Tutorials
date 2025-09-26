@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focusable Table with JS</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px;
+    }
+    td {
+      border: 1px solid black;
+      padding: 20px;
+      text-align: center;
+      outline: none;
+      transition: background 0.3s;
+    }
+    td:focus {
+      background-color: yellowgreen;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Table Cells with onfocus Event</h2>
+  <table id="myTable">
+    <tr>
+      <td tabindex="0">Cell 1</td>
+      <td tabindex="0">Cell 2</td>
+      <td tabindex="0">Cell 3</td>
+    </tr>
+    <tr>
+      <td tabindex="0">Cell 4</td>
+      <td tabindex="0">Cell 5</td>
+      <td tabindex="0">Cell 6</td>
+    </tr>
+    <tr>
+      <td tabindex="0">Cell 7</td>
+      <td tabindex="0">Cell 8</td>
+      <td tabindex="0">Cell 9</td>
+    </tr>
+  </table>
+
+  <script>
+    // Select all table cells
+    const cells = document.querySelectorAll("#myTable td");
+
+    // Add onfocus event to each cell
+    cells.forEach((cell, index) => {
+      cell.onfocus = function() {
+        console.log(`Focused on Cell ${index + 1}`);
+        // Example: show row and column
+        const row = cell.parentElement.rowIndex + 1;
+        const col = cell.cellIndex + 1;
+        cell.innerHTML = `Row ${row}, Col ${col}`;
+      };
+
+      // Optional: restore original text on blur
+      cell.onblur = function() {
+        cell.innerHTML = `Cell ${index + 1}`;
+      };
+    });
+  </script>
+</body>
+</html>
