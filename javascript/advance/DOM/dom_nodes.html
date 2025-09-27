@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <ul class="ulist">
+           <li>First</li>
+           <li class='second'>Second</li>
+           <li>Third</li>
+      </ul>
+</body>
+<script>
+       const newitem = document.createElement('li');
+       newitem.innerHTML='Inserted new Items'
+
+       const mainlist = document.querySelector('.ulist')
+       const seconditem = document.querySelector('.second')
+       
+       mainlist.insertBefore(newitem , seconditem)
+
+
+</script>
+</html>
