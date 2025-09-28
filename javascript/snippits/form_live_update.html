@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="" class="forms">
+              <label for='name'>Name</label>
+              <input type="text" name="name" placeholder="Enter Name Here"><br><br>
+              <label for='name'>SirName</label>
+              <input type="text" name="lname" placeholder="Enter Sirname Here">
+              <br><br>
+              <input type="submit" name="submit" value="Submit"> 
+    </form><br>
+
+    <div style="width: 500px; height:500px ; background-color:rgb(255, 227, 227)" >
+        <p>Name: <span id="displayname"></span></p>
+        <p>Sirname: <span id="displaysirname"></span></p>
+    </div>
+
+</body>
+<script>
+    const form = document.querySelector('.forms');
+    const name = form.elements['name'];
+    const lname = form.elements['lname'];
+    
+    // Display input Content
+    const displayname = document.querySelector('#displayname')
+    const displaysirname = document.querySelector('#displaysirname')
+
+    // Live update for name
+    name.addEventListener('input' , function(){
+           displayname.innerHTML = name.value;
+    });
+    lname.addEventListener('input' , function(){
+          displaysirname.innerHTML = lname.value
+    })
+</script>
+</html>
