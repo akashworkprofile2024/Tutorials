@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .displayimg {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50px;
+      overflow: hidden; /* ensures image stays inside circle */
+    }
+
+    .displayimg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* nicely crop image */
+    }
+  </style>
+
+<body>
+    <form action="" class="forms">
+        Choose Image: <input type="file" id="uploadfile" name="uploadfile">
+        <input type="submit" class="submit" name="submit" value="Submit">
+    </form>
+    <div class="displayimg"></div>
+</body>
+<script>
+    const forms = document.querySelector('.forms');
+    const storeimg_input = document.querySelector('#uploadfile');
+    const subbtn = document.querySelector('.submit');
+    const displayimg = document.querySelector('.displayimg')
+
+    subbtn.addEventListener('click' , function(e){
+        e.preventDefault();  // form reload रोक दिया
+        
+        const file = storeimg_input.files[0];   // चुनी हुई फाइल ली
+        if(file){
+            const reader = new FileReader();  // FileReader object बनाया
+            reader.onload = function(e){
+                displayimg.innerHTML = `<img src="${e.target.result}">`;
+            }
+            reader.readAsDataURL(file);  // फाइल को base64 URL में बदला
+        }else{
+            alert('please Choose an image first');
+        }
+    });
+
+    console.log(forms , storeimg_input , subbtn, displayimg);
+</script>
+</html>
+

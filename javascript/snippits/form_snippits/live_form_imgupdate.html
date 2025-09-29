@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+         .displayimg {
+      width: 150px;
+      height: 150px;
+      background-color: #f0f0f0;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 10px;
+    }
+    .displayimg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
+</head>
+<body>
+    <form action="" class="form mt-1 ms-2">
+        <input type="file" name="uploadfile" class="uploadfile" id="uploadfile" class="">
+    </form>
+    <div class="displayimg">
+    </div>
+</body>
+   <script>
+                 const imginput = document.querySelector('.uploadfile')
+                 const displayimg = document.querySelector('.displayimg')
+                 imginput.addEventListener('change',  function(){
+                    const file = imginput.files[0];
+
+                    if(file){
+                        const reader = new FileReader();
+                        reader.onload = function(e){
+                            displayimg.innerHTML=`<img src="${e.target.result}" class="border">`;
+                        }
+                        reader.readAsDataURL(file);
+                    }else{
+                        displayimg.innerHTML='';
+                    }
+                 });
+                 console.log(imginput , displayimg)
+   </script>
+</html>
