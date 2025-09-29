@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Receiver Page</title>
+<style>
+  #displayimg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<h2>Receiver Page</h2>
+<div id='displayname'></div>
+<div>
+    <img id="displayimg" src="" alt="Uploaded Image">
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem('formData'));
+
+if(data){
+    document.getElementById('displayname').textContent = `Name: ${data.name}`;
+    document.getElementById('displayimg').src = data.image;
+    localStorage.removeItem('formData'); // optional cleanup
+} else {
+    document.getElementById('displayname').textContent = 'No data found!';
+}
+</script>
+</body>
+</html>
