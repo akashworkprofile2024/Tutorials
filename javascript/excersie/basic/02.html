@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima blanditiis enim architecto facilis aliquid voluptatem rem dolore, amet unde magnam culpa, sint modi iste. Accusamus, quis consequatur doloribus sunt quia aspernatur ut iure, obcaecati hic eius quos ipsam veniam facilis eligendi earum adipisci repellendus. Maiores facere dicta accusantium nam sequi.</p>
+       <button class="tap">Print</button>
+</body>
+<script>
+        const storetap = document.querySelector('.tap')
+        storetap.addEventListener('click' , function(e){
+            e.preventDefault();
+            storetap.style.display = 'none';
+            window.print(); 
+            
+        })
+</script>
+</html>
