@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Autocomplete</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .autocomplete {
+        position: relative;
+        width: 300px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+      }
+      .suggestions {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border: 1px solid #ccc;
+        background: white;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1000;
+      }
+      .suggestion-item {
+        padding: 8px;
+        cursor: pointer;
+      }
+      .suggestion-item:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Choose Your Country</h2>
+
+    <div class="autocomplete">
+      <input type="text" id="countryInput" placeholder="Type a country name...">
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <script>
+      const countries = [
+        "India",
+        "Indonesia",
+        "Iceland",
+        "Ireland",
+        "Italy",
+        "Iran",
+        "Iraq",
+        "Israel",
+        "Ivory Coast",
+        "United States",
+        "United Kingdom",
+        "Germany",
+        "France",
+        "Canada",
+        "Australia",
+        "Japan",
+        "China",
+        "Brazil",
+        "South Africa",
+        "Spain",
+        "Mexico",
+        "Russia",
+        "Norway",
+      ];
+
+      const input = document.getElementById("countryInput");
+      const suggestionsBox = document.getElementById("suggestions");
+
+      input.addEventListener("input", function () {
+        const query = input.value.toLowerCase();
+        suggestionsBox.innerHTML = "";
+
+        if (query) {
+          // Use normal function instead of arrow
+          const filtered = countries.filter(function (country) {
+            return country.toLowerCase().startsWith(query);
+          });
+
+          filtered.forEach(function (country) {
+            const div = document.createElement("div");
+            div.textContent = country;
+            div.classList.add("suggestion-item");
+
+            div.addEventListener("click", function () {
+              input.value = country;
+              suggestionsBox.innerHTML = "";
+            });
+
+            suggestionsBox.appendChild(div);
+          });
+        }
+      });
+
+      // Hide suggestions if clicked outside
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".autocomplete")) {
+          suggestionsBox.innerHTML = "";
+        }
+      });
+    </script>
+  </body>
+</html>
