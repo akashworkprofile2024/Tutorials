@@ -1,0 +1,19 @@
+.nav-link{
+     border-radius: 5.5px;
+     background-color: white;
+}
+.nav-item:hover , a:hover{
+      background-color: rgb(139, 86, 253);
+      color: white !important ; 
+      border-radius: 5.5px;
+}
+
+
+.hover-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.simple:hover +  .hover-btn {
+  opacity: 1; /* show button when hovering the container */
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="animate_string('target')" style="background-color: #212121; color:white">
+       <pre id="target" style="font-size: xx-large;">Akash</pre>  
+</body>
+<script>
+       function animate_string(id)
+       {
+            let element = document.querySelector('#target');
+            let textNode = element.childNodes[0];
+            let text = textNode.data;
+            
+            setInterval(function()
+            {
+               text = text[text.length -1] + text.substring(0,text.length -1);
+               textNode.data=text;
+            },100);
+       } 
+       animate_string();
+</script>
+</html>
+
+
+<!-- 
+1. onload="animate_string('target')"
+
+जैसे ही पेज load होता है, यह function animate_string('target') call हो जाता है।
+
+यहाँ "target" मतलब <pre id="target">Akash</pre> वाला element।
+
+2. let element = document.querySelector('#target');
+
+यह लाइन id="target" वाले element (<pre>Akash</pre>) को पकड़ती है।
+
+3. let textNode = element.childNodes[0];
+
+<pre> के अंदर "Akash" एक text node है।
+
+childNodes[0] उस text को पकड़ लेता है।
+
+4. let text = textNode.data;
+
+यहाँ "Akash" को एक variable text में डाल दिया गया।
+
+अब text = "Akash"।
+
+5. setInterval(function(){ ... },100);
+
+यह हर 100 milliseconds (0.1 second) में function चलाएगा।
+
+मतलब text बार-बार update होगा और ऐसा लगेगा कि word rotate हो रहा है।
+
+6. Rotation Logic:
+
+text = text[text.length -1] + text.substring(0,text.length -1);
+
+
+text[text.length -1] → text का आखिरी character।
+
+"Akash" → text[4] = "h"
+
+text.substring(0, text.length -1) → आखिरी character छोड़कर बाकी string।
+
+"Akash".substring(0,4) → "Akas"
+
+दोनों जोड़ दो → "h" + "Akas" → "hAkas"
+
+7. textNode.data = text;
+
+अब <pre> के अंदर का text update हो जाएगा।
+
+-->
