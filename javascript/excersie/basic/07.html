@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #4facfe;
+      border-radius: 8px;
+      outline: none;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background: #4facfe;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #00c6fb;
+      transform: scale(1.05);
+    }
+
+    #display {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🎯 Guess the Number (1-10)</h2>
+    <form action="" class="form">
+      <input type="number" class="number" id="number" min="1" max="10" placeholder="Enter your guess">
+      <br>
+      <input type="submit" class="submit" value="Check">
+      <p id="display"></p>
+    </form>
+  </div>
+
+  <script>
+    const num = document.querySelector('#number');
+    const btn = document.querySelector('.submit');
+    const display = document.querySelector('#display');
+
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const guess = Math.ceil(Math.random() * 10);
+      const userGuess = parseInt(num.value);
+
+      console.log("Random:", guess, "| User:", userGuess);
+
+      if (userGuess === guess) {
+        display.innerHTML = "🎉 Congratulations! You won 7 CR 💰";
+        display.style.color = "green";
+      } else {
+        display.innerHTML = "❌ Sorry! You lost the game. Number was " + guess;
+        display.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
