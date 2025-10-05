@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body style="background-color:#212121;color:white;">
+    <h2 style="text-align: center;">Javascript Array Method</h2>
+    <h3>Javascript Array length</h3>
+    <p>The length property returns the length (size) of an array: <pre>let size = Arr_Name.length;</pre></p>
+    <p>The length property can also be used to set the length of an array: <pre>Arr_Name.length = 2</pre></p>
+    <h3>JavaScript Array toString()</h3>
+    <p>The toString() method returns the elements of an array as a comma separated string.</p>
+   <pre>let myList = Arr_Name.toString(); <br>output: str1 , str2 , str3 ,str4
+   </pre>
+   <p><i>Every JavaScript object has a toString() method. <br>The toString() method is used internally by JavaScript when an object needs to be displayed as a text (like in HTML), or when an object needs to be used as a string.</i></p>
+   <h3>JavaScript Array at()</h3>
+   <p>ES2022 intoduced the array method at():</p>
+   <pre>let variable = Arr_Name.at(2) or Arr_Name[2] <br>output: str3 </pre>
+   <p>The at() method returns an indexed element from an array. <br> The at() method returns the same as [].</p>
+   <p><i>Many languages allow negative bracket indexing like [-1] to access elements from the end of an object / array / string <br>This is not possible in JavaScript, because [] is used for accessing both arrays and objects. obj[-1] refers to the value of key -1, not to the last property of the object. <br>The at() method was introduced in ES2022 to solve this problem.
+</i></p>
+<h3>JavaScript Array join()</h3>
+<p>The join() method also joins all array elements into a string. <br> It behaves just like toString(), but in addition you can specify the separator:
+<pre>arr_Name1.join("*") or arr_Name1.join(arr_Name2)</pre>
+</p>
+
+
+</body>
+</html>
