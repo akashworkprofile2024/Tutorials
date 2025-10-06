@@ -9,6 +9,7 @@ const fields = [
   { input: 'educationInput', preview: 'educationPreview' }
 ];
 
+
 fields.forEach(field => {
   const inputEl = document.getElementById(field.input);
   const previewEl = document.getElementById(field.preview);
