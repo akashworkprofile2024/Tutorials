@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Resume Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+  
+
+<div class="container py-5">
+  <div class="row">
+    
+    <!-- Form Section -->
+    <div class="col-md-6">
+      <h2>Resume Form</h2>
+      <form id="resume-form">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Your Name" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Profile Image</label>
+          <input type="file" class="form-control" id="imageInput" accept="image/*" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailInput" placeholder="you@example.com" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Phone</label>
+          <input type="text" class="form-control" id="phoneInput" placeholder="1234567890" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Summary</label>
+          <textarea class="form-control" id="summaryInput" rows="3" placeholder="A brief summary..."></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Skills</label>
+          <input type="text" class="form-control" id="skillsInput" placeholder="e.g., HTML, CSS, JavaScript" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Experience</label>
+          <textarea class="form-control" id="experienceInput" rows="3" placeholder="Your work experience..."></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Education</label>
+          <textarea class="form-control" id="educationInput" rows="3" placeholder="Your education details..."></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="downloadPDF()">Download PDF</button>
+      </form>
+    </div>
+
+    <!-- Resume Preview Section -->
+    <div class="col-md-6">
+      <h2>Live Preview</h2>
+      <div id="resume-preview" class="p-4 bg-white border shadow-sm" style="min-height: 500px;">
+        <div class="d-flex justify-content-between align-items-start">
+          <h2 id="namePreview">Your Name</h2>
+          <img id="profileImage" src="" alt="Profile Image" class="rounded-circle" style="width:100px; height:100px; object-fit:cover; display: none;" />
+        </div>
+        <p><strong>Email:</strong> <span id="emailPreview">you@example.com</span></p>
+        <p><strong>Phone:</strong> <span id="phonePreview">1234567890</span></p>
+        <hr>
+        <h4>Summary</h4>
+        <p id="summaryPreview">A brief summary...</p>
+        <h4>Skills</h4>
+        <p id="skillsPreview">HTML, CSS, JavaScript</p>
+        <h4>Experience</h4>
+        <p id="experiencePreview">Your work experience...</p>
+        <h4>Education</h4>
+        <p id="educationPreview">Your education details...</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Dependencies -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
