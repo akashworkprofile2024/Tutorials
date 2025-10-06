@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:white;text-align:center">
+    <img src="./image_snippits/img1.jpg" id="mainimg" alt="" style="width: 300px; height: auto; cursor: pointer;">
+</body>
+<script>
+    let index = 0
+    const storemainimg = document.querySelector("#mainimg")
+    const arr = ["image_snippits/img1.jpg","image_snippits/img2.jpg"]
+    storemainimg.addEventListener('click' , function(e){
+        e.preventDefault;
+        index=(index+1)%arr.length
+        storemainimg.src=arr[index];
+    })
+</script>
+</html>

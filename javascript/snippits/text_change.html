@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="target">Hello</p>
+      
+    <script>
+        let index = 0;
+        const target = document.querySelector('#target');
+        const arr = ["Hi", "Bye"];
+
+        target.addEventListener("click", function(e) {
+            e.preventDefault(); // ✅ Corrected function call
+
+            // This is just for demonstration — update with real logic
+            target.innerHTML = arr[index];
+            index =(index+1)%arr.length // Still gives "Hello1"
+        });
+    </script>
+</body>
+</html>
