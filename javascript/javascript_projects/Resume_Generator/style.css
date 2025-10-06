@@ -8,3 +8,126 @@
 }
 
 
+.skill-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+}
+
+.skill-tag {
+  font-size: 0.9rem;
+  padding: 5px 8px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.skill-tag span {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+#suggestionBox {
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.resume-template p {
+    white-space: pre-wrap; /* Keeps line breaks from textareas */
+    color: #555;
+}
+
+#resume-preview-container {
+    min-height: 800px;
+}
+
+/* TEMPLATE CHOOSER STYLES */
+.template-chooser {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.template-chooser label {
+    cursor: pointer;
+    text-align: center;
+}
+
+.template-chooser img {
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+    width: 100px;
+    height: 141px; /* Maintain A4 aspect ratio */
+}
+
+.template-chooser input[type="radio"] {
+    display: none;
+}
+
+.template-chooser input[type="radio"]:checked + img {
+    border-color: #0d6efd; /* Bootstrap Primary Color */
+}
+
+.template-chooser span {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+/* TEMPLATE 2: MODERN STYLES */
+#template2 .modern-layout {
+    min-height: 842px; /* A4 height approximation */
+}
+#template2 .modern-sidebar {
+    background-color: #343a40; /* Dark Gray */
+    flex-basis: 35%;
+}
+
+#template2 .modern-sidebar h3, #template2 .modern-sidebar h5 {
+    color: white;
+}
+#template2 .modern-sidebar p {
+    color: #f8f9fa; /* Light Gray */
+    word-break: break-word;
+}
+
+#template2 .modern-main {
+    flex-basis: 65%;
+}
+
+/* TEMPLATE 3: MINIMALIST STYLES */
+#template3.minimalist-layout {
+    font-family: 'Garamond', 'Times New Roman', serif;
+}
+
+/* TEMPLATE 4: BOLD HEADER STYLES */
+#template4.bold-layout {
+    padding: 0;
+}
+#template4 .bold-header {
+    background: linear-gradient(to right, #434343, #000000);
+}
+
+/* TEMPLATE 5: CREATIVE CENTERED STYLES */
+#template5.creative-layout {
+    padding: 0;
+}
+#template5 .creative-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #0d6efd;
+}
+#template5 .creative-body hr {
+    margin-top: 0.25rem;
+    border-top: 1px solid #dee2e6;
+}
