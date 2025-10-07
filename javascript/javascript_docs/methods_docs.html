@@ -102,6 +102,89 @@ The slice() method does not remove any elements from the source array.</i></p>
 <p>JavaScript automatically converts an array to a comma separated string when a primitive value is expected. <br></p>
 <pre>arr_Name.toString() <br>python,java,javascript,css,html</pre>
 <h3>Array indexOf()</h3>
+<p>The indexOf() method searches an array for an element value and returns its position. <br>Array.indexOf() returns -1 if the item is not found. <br>If the item is present more than once, it returns the position of the first occurrence.</p>
+<pre>arr_Name.indexOf("Apple") <br>array.indexOf(item, start)</pre>
+<h3>Array lastIndexOf()</h3>
+<p>Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.</p>
+<pre>arr_Name.lastIndexOf("Apple")</pre>
+<h3>Array includes()</h3>
+<p>ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf). <br><br>Syntax: array.includes(search-item)</p>
+<pre>arr.includes("javascript") <br>Output: true , false</pre>
+<h3>Array find()</h3>
+<p>The find() method returns the value of the first array element that passes a test function.</p>
+<pre>
+    const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
 
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</pre>
+<p><i>Note that the function takes 3 arguments: <br>
+The item value <br>
+The item index <br>
+The array itself <br>
+</i></p>
+<h3>Array findIndex()</h3>
+<p>The findIndex() method returns the index of the first array element that passes a test function.</p>
+<pre>
+    const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</pre>
+<h3>Array findLast() Method</h3>
+<p>ES2023 added the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.</p>
+<pre>
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast(x => x > 40);
+</pre>
+<h3>Array findLastIndex() Method</h3>
+<p>The findLastIndex() method finds the index of the last element that satisfies a condition.</p>
+<pre>
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let pos = temp.findLastIndex(x => x > 40);
+</pre>
+<h3>Sorting an Array</h3>
+<p>The sort() method sorts an array alphabetically:</p>
+<pre>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+</pre>
+<h3>Reversing an Array</h3>
+<p>The reverse() method reverses the elements in an array:</p>
+<pre>const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse();</pre>
+<h3>Array toSorted() Method</h3>
+<p>ES2023 added the toSorted() method as a safe way to sort an array without altering the original array. <br>
+The difference between toSorted() and sort() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.</p>
+<pre>
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const sorted = months.toSorted();
+</pre>
+<h3>Array toReversed() Method</h3>
+<p>ES2023 added the toReversed() method as a safe way to reverse an array without altering the original array. <br>
+The difference between toReversed() and reverse() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.</p>
+<pre>const months = ["Jan", "Feb", "Mar", "Apr"];
+const reversed = months.toReversed();</pre>
+<h3>Array in Random Order</h3>
+<p>Using a sort function, like explained above, you can sort an numeric array in random order</p>
+<pre>const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(){return 0.5 - Math.random()});</pre>
+<h3>Find Min or Max with sort()</h3>
+<p>Sort Ascending: <br> 
+    const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+// now points[0] contains the lowest value
+// and points[points.length-1] contains the highest value 
+<br><br>
+Sort Descending: <br>
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return b - a});
+// now points[0] contains the highest value
+// and points[points.length-1] contains the lowest value
+</p>
 </body>
 </html>
