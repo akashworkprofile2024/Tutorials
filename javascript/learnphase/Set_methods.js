@@ -55,14 +55,25 @@ console.log('\n')
 // Keys
 let keys_store = '';
 for(const  ee of createarr2.values()){
-    keys_store += ee
+    keys_store += ee + ","
 }
 console.log("Keys: " , keys_store.split().slice().join(','))
 
 // Values
 const createarr3 = new Set(['Apple','Mango','Banana','Grapes','Apple'])
 let value_store = "";
+for(const ele of createarr3.values()){
+    value_store += ele + ","
+}
+console.log("Values", value_store,'\n')
 
+// Entries
+const createarr3cpy = new Set(['Apple','Mango','Banana','Grapes','Apple'])
+let entries_store;
+for(const enele of createarr3cpy.entries()){
+    entries_store = enele;
+}
+console.log(`Entires` , createarr3cpy.entries(),'\n')
 
 
 
