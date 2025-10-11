@@ -46,16 +46,23 @@ if(store1.has('python')){
 
 // ForEach
 const createarr2 = new Set([22, 'Tanjiro' , 'Hugo' , '35'])
+console.log(`ForEach in Set:`)
 createarr2.forEach((e)=>{
     console.log(e  + "'s")
-})
+});
+console.log('\n')
 
 // Keys
 let keys_store = '';
 for(const  ee of createarr2.values()){
     keys_store += ee
 }
-console.log(keys_store.split().slice().join(','))
+console.log("Keys: " , keys_store.split().slice().join(','))
+
+// Values
+const createarr3 = new Set(['Apple','Mango','Banana','Grapes','Apple'])
+let value_store = "";
+
 
 
 
